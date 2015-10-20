@@ -9,7 +9,7 @@ public class MySQLConnection {
 	static final String DB_URL = "jdbc:mysql://localhost/employee_management_system";
 
 	// Database credentials
-	static final String USER = "binhnguyen";
+	static final String USER = "root";
 	static final String PASS = "123456";
 
 	private static Connection conn = null;
@@ -21,7 +21,7 @@ public class MySQLConnection {
 		try {
 			Class.forName(JDBC_DRIVER);
 			System.out.println("Connecting to a selected database...\n");
-			conn = DriverManager.getConnection(DB_URL, USER,PASS);
+			conn = DriverManager.getConnection(DB_URL, USER, PASS);
 			System.out.println("Connected database succesfully...\n");
 		} catch (ClassNotFoundException e) {
 			// TODO Auto-generated catch block
